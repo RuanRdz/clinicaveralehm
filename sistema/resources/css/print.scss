@@ -1,0 +1,60 @@
+@media only print {
+
+    @page {
+        /* force portrait */
+        size: 210mm 297mm;
+        /* Chrome sets own margins, we change these printer settings */
+        margin: 6mm; 
+    }
+
+    * {
+        color: #101010;
+        background: transparent;
+        text-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.2;
+        color: #101010;
+        background: #ffffff;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav, footer, video, audio, object, embed {
+        display: none;
+    }
+    
+    .print-trigger, .print-trigger *, .no-print, .no-print *
+    {
+        display: none !important;
+    }
+    
+    p {
+        widows: 3;
+    }
+    
+    h5 {
+        font-size: 9.5pt;
+    }
+    
+    table {
+        font-size: 8.5pt;
+        overflow: hidden;
+    }
+    
+    .document_header {
+        font-size: 8.5pt;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .document_header th, .document_header td {
+        padding: 1px;
+        border: 1px solid #f0f0f0;
+    }
+}

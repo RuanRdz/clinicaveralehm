@@ -1,0 +1,400 @@
+@media only screen {
+        
+    table.valign-middle thead th,
+    table.valign-middle tbody td {
+        vertical-align: middle;
+    }
+        
+    .grabbable {
+        cursor: move; /* fallback if grab cursor is unsupported */
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+    
+     /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+    .grabbable:active { 
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
+    
+    .circular-crop {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        margin: 0;
+        border-radius: 100%;
+        background: #eee no-repeat center;
+        background-size: cover;
+    }
+    
+    .alert-sistema {
+        position: absolute;
+        width: 300px;
+        z-index: 9999;
+        top: 70px;
+        right: 20px;
+    }
+    
+    /* Asterisco dos campos obrigatórios */
+    sup.required-mark {
+        color: $brand-danger;
+        font-size: 1.1rem;
+    }
+    
+    /*** custom checkboxes ***/
+    .customCheckbox { display:none; } /* to hide the checkbox itself */
+    .customCheckbox + label:before {
+        font-family: FontAwesome;
+        display: inline-block;
+    }
+    .customCheckbox + label:before { content: "\f096"; } /* unchecked icon */
+    .customCheckbox + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+    .customCheckbox:checked + label:before { content: "\f046"; } /* checked icon */
+    .customCheckbox:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+    /*** custom checkboxes ***/
+        
+        
+    /* AGENDA PACIENTE */
+    #data_sessao {
+        z-index: 99999;
+    }
+    table.table-consulta-sessoes {
+        width: auto;
+    }
+    .table-consulta-sessoes td.horario {
+        width: 56px;
+        height: auto;
+        background: #f4f4f4;
+        text-align: center !important;
+    }
+    .table-consulta-sessoes td {
+        width: 56px;
+        height: 34px;
+        cursor: zoom-in;
+        text-align: center !important;
+    }
+    .table-consulta-sessoes-complexidade {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 14px !important;
+        text-align: center !important;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        border-radius: 50%;
+        color: #fff;
+        background: #b5b5b5;
+    }
+    
+    /* GRID HORÁRIOS DO DIA */
+    .hdd {
+        border-collapse: separate;
+        border-spacing: 5px;
+    }
+    .hdd td {
+        padding: 0;
+        margin: 0;
+    }
+    .hdd .hdd-horario {
+        vertical-align: middle;
+        width: 50px;
+        font-size: 14px;
+        text-align: center!important;
+        background: #f4f4f4;
+        border: 2px solid #e0e0e0;
+    }
+    .hdd .hdd-horario-vazio {
+        background: #f8f8f8;
+        border: 2px solid #f1f1f1;
+    }
+    .hdd .hdd-box
+    {
+        border: 2px solid #e0e0e0; 
+    }
+    
+    .hdd .hdd-paciente {
+        width: 186px;
+        height: 16px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    .hdd .hdd-paciente h1 {
+        color: #000;
+        padding: 2px;
+        margin: 0;
+        font-size: 10px;
+        font-weight: bold;
+        /* Limit string */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .hdd .hdd-detalhes li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .hdd .hdd-foto, 
+    .hdd .hdd-foto img 
+    {
+        width: 65px;
+        height: 65px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .hdd .btn-abrir-atalhos {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    .hdd .hdd-atalhos {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border: 1px dashed #999;
+    }
+    
+    .hdd .hdd-content {
+        width: 100%;
+        font-size: 12px;
+        text-align: center!important;
+    }
+    
+    .hdd .hdd-content .hdd-content-edit {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .dd .hdd-content .hdd-content-info-container {
+        width: 100%;
+        text-align: center;
+    }
+        .hdd .hdd-content .hdd-content-sessao {
+            /*display: table-cell;
+            vertical-align: middle;*/
+        }
+        .hdd .hdd-content .hdd-content-sessao-current {
+            /*display: table-cell;
+            vertical-align: middle;*/
+            font-weight: bold;
+            font-size: 20px !important;
+        }
+    
+        .hdd .hdd-content .hdd-content-complexidade {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 18px !important;
+            text-align: center !important;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            border-radius: 50%;
+            color: #fff;
+            background: #b5b5b5;
+        }
+        .hdd .hdd-content .hdd-content-notificacoes {
+            /*display: table-cell;
+            vertical-align: middle;*/
+        }
+        .hdd .hdd-content .hdd-content-whatsapp {
+            margin: 0!important;
+            padding: 0!important;
+        }
+    
+    
+    
+    .hdd .hdd-box-bloqueio,
+    .hdd .hdd-box-agendamento
+    {
+        line-height: 1;
+        font-size: 11px;
+        height: 83px !important;
+        width: 186px !important;
+        color: #101010;
+        border: 2px solid #e0e0e0;
+    }
+    .hdd .hdd-box-bloqueio td,
+    .hdd .hdd-box-agendamento td
+    {
+        padding: 0 2px;
+    }
+    .hdd .hdd-box-bloqueio-trash,
+    .hdd .hdd-box-agendamento-trash
+    {
+        font-size: 14px;
+        width: 16px;
+        text-align: center;
+        vertical-align: top;
+    }
+    .hdd .hdd-box-bloqueio-trash a,
+    .hdd .hdd-box-agendamento-trash a
+    {
+        color: #fff;
+    }
+    .hdd-bloqueio { background: #FFC076 !important; }
+    .hdd-global.hdd-bloqueio { border-color: #AF9143 !important; }
+    .hdd-bloqueio-2 { background: #FF958F !important; }
+    .hdd-global.hdd-bloqueio-2 { border-color: #D1554E !important; }
+    .hdd-agendamento { background: #BDBBF4 !important; }
+    
+    .hdd-agendamento .hdd-paciente,
+    .hdd-agendamento .hdd-paciente h1,
+    .hdd-agendamento .hdd-paciente-detalhes
+    {
+        width: 100%;
+    }
+    .hdd-agendamento .hdd-paciente h1 {
+        color: #000;
+    }
+    
+    
+    #formDataAgenda {
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    #formDataAgenda input[name=data] {
+        width: 100px;
+    }
+    
+    .formAgendaComplexidade {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 20px !important;
+        text-align: center !important;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        border-radius: 50%;
+        color: #fff;
+        background: #b5b5b5;
+    }
+    
+    
+    
+    .box_tarefa {
+        display: block;
+        margin: 0 0 15px 0;
+        position: relative;
+    }
+    .box_tarefa_body {
+        padding: 6px;
+        height: 60px;
+        overflow-y: auto;
+    }
+    .box_tarefa_footer {
+        padding: 3px 6px;
+    }
+    .box_tarefa_footer span {
+        font-size: 10px;
+    }
+    .box_tarefa_finalizado {
+        position: absolute;
+        top: -10px;
+        left: -8px;
+    }
+    
+    .form-anamnesetratamentos p {
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    /* FINANCEIRO */
+    .activePrevisao {
+        color: #4C51BF !important;
+    }
+    
+    
+    /* INBOX */
+    
+    .inbox_user_list a {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    .inbox_messages {
+        overflow: scroll;
+        overflow-x: hidden;
+        min-height: 300px;
+        max-height: 400px;
+    }
+    .inbox_message_footer {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        font-size: 11px;
+        color: #909090;
+        background: #fafafa;
+    }
+    .inbox_message_received {
+        color: #202020;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .inbox_message_sent {
+        color: #606060;
+        font-size: 13px;
+    }
+    /* INBOX */
+    
+    
+    
+    /* PAINEL PACIENTE */
+    
+    .table-painel {
+        // font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .table-painel th {
+        font-weight: normal;
+        color: $gray-base;
+        border-color: $gray-lighter !important;
+    }
+    .table-painel td {
+        color: $gray-darker;
+        border-color: $gray-lighter !important;
+    }
+    
+    /* PAINEL PACIENTE */
+    
+    
+    /* MEDIUM EDITOR */
+    
+    .editor_prontuario,
+    .editor_laudo,
+    .show_laudo
+    {
+        line-height: 1.5 !important;
+        font-size: 14px !important;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    .editor_prontuario {
+        // color: #303030;
+        background-color: #fff;
+        border: 1px solid #cadfa9;
+        padding: 5px;
+        width: 100%;
+    }
+    .editor_laudo {
+        // color: #303030;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .table-fluxo-de-caixa {
+        tr, th, td {
+            border-color: #909090 !important;
+        } 
+    }
+}

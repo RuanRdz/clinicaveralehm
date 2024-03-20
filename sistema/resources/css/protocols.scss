@@ -1,0 +1,189 @@
+
+/* Estesiometro */
+.sorri-right-hand { display: none; }
+.sorri-left-hand { display: none; }
+
+.sorri-right-hand .boxes,
+.sorri-left-hand .boxes
+{
+	display: inline;
+}
+.sorri-right-hand .box,
+.sorri-left-hand .box
+{
+	fill: #339933;
+	stroke: #1A1A1A;
+	stroke-width: 2;
+	stroke-miterlimit: 10;
+	cursor: pointer;
+}
+
+.sorri-right-hand .base,
+.sorri-left-hand .base
+{
+	display: inline;
+	fill: #F2F2F2;
+	stroke: #666666;
+	stroke-width: 2;
+	stroke-miterlimit: 10;
+}
+.sorri-right-hand .letter,
+.sorri-left-hand .letter
+{
+	display: inline;
+	fill: #999999;
+}
+.estesiometro-container {
+	overflow: auto; /* clearfix */
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+	text-align: center !important;
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start; */
+}
+.estesiometro-item {
+	padding: 0.2rem;
+	width: 200px;
+	display: inline-block;
+	/* flex-grow: 16.5%;
+	flex-basis: 16.5%; */
+}
+.estesiometro-item .panel {
+	margin: 0;
+}
+.estesiometro-item .panel-footer {
+	text-align: center;
+}
+.estesiometro-item .panel-footer a {
+	color: #c0c0c0;
+}
+
+/* Avds */
+.avds-input-wrap > label {
+	cursor: pointer;
+	display: table;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.avds-input-wrap > label > span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.avds-input-wrap > label > span > input[type=radio] {
+	margin: 0;
+	padding: 0;
+}
+
+/* Terminologia */
+@media only screen {
+    .terminologia {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            vertical-align: top !important;
+        }
+        .terminologia_column {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 5px 0 0 5px;
+            li {
+                font-size: 14px;
+                line-height: 1.2;
+                list-style-type: none;
+            }
+        }
+        .title {
+            font-size: 12px;
+            font-weight: normal;
+            padding-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 12px;
+            font-weight: bold;
+            padding-top: 8px;
+            padding-bottom: 5px;
+        }
+        .question {
+            font-weight: normal;
+        }
+        .col-title {
+            border: 1px solid #e0e0e0;
+            border-bottom: none;
+            padding: 5px;
+        }
+        .col-content {
+            padding: 5px;
+            margin: 0 !important;
+        }
+    }
+    .terminologiaForm {
+        ul {
+            margin: 0 0 0 25px;
+            padding: 0;
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+}
+@media only print {
+    .terminologia {
+        table {
+            font-size: 8.5pt;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td {
+            vertical-align: top;
+        }
+        .terminologia_column {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 5px 0 0 5px;
+            li {
+                font-size: 8.5pt;
+                line-height: 1.2;
+                list-style-type: none;
+            }
+        }
+        .title {
+            font-size: 10.5pt;
+            font-weight: normal;
+            padding-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 8.5pt;
+            font-weight: bold;
+            padding-top: 8px;
+            padding-bottom: 5px;
+        }
+        .question {
+            font-weight: normal;
+        }
+        .col-title {
+            border: 1px solid #e0e0e0;
+            border-bottom: none;
+            padding: 5px;
+        }
+        .col-content {
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            padding: 5px;
+        }
+    }
+}

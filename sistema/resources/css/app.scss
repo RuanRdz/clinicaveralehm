@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+@import './_variables';
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+html {
+    font-size: 13px!important; /* root */
+}
+
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+
+    @import './base'; // screen
+    @import './admin'; // screen
+    @import './print'; // print
+    @import './protocols'; // all
+    @import './report'; // all
+
+@import "~tailwindcss/utilities";
